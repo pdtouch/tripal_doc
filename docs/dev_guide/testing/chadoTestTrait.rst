@@ -2,7 +2,7 @@
 Chado Testing Environment
 ==========================
 
-The chado testing environment builds upon the Tripal testing environment. I will describe the chado specific portions in detail below but for more detail on the other steps you should check out the documentation on the Tripal Test Environment.
+The chado testing environment builds upon the Tripal testing environment. I will describe the chado specific portions in detail below but for more detail on the other steps you should check out the documentation on the :ref:`Tripal Testing Environment`.
 
 1. Drupal sets up the testing environment including it's own database and fully functional site.
 2. Tripal does not make any new changes to the environment but the Chado Test bases do. Specifically, the add the chado_installations table to the drupal schema and initialize TripalDBX in the test environment.
@@ -20,7 +20,7 @@ The chado testing environment builds upon the Tripal testing environment. I will
    - `PREPARE_TEST_CHADO`: creates a chado schema with all tables and all records that would be present after running "prepare" through the UI.
    - `INIT_CHADO_DUMMY`: creates a prepared chado schema with everything that PREPARE_TEST_CHADO and with additional test data. You can see the test data here in `tripal_chado/tests/fixtures/fill_chado.sql <https://github.com/tripal/tripal/blob/4.x/tripal_chado/tests/fixtures/fill_chado.sql>`_
 
-4. Finally your test method is called. Note: any services, plugins, etc you use here will only have the test environment available. You will not have access to any data in your main site, nor should this long term affect your main site. **That said, we do not recommend running tests on production sites!**
+4. Finally your test method is called. Note: any services, plugins, etc. that you use here will only have the test environment available. You will not have access to any data in your main site, nor should this long term affect your main site. **That said, we do not recommend running tests on production sites!**
 5. Once your test is complete, the `tearDown()`` method is called to clean the entire development environment up. This includes dropping the development drupal tables including any changes made by your test.
 
 Retrieving the cvterm ID of a term in your test chado

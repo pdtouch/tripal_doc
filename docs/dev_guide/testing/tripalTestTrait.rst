@@ -1,15 +1,15 @@
 
-Tripal Testing Evironment
-==========================
+Tripal Testing Environment
+===========================
 
-Tripal uses the Drupal testing environment to automate our tests using PHPUnit. This means that when you run tests on any Tripal site, the following will happen **FOR EACH TEST**:
+Tripal uses the Drupal testing environment to automate our tests using `PHPUnit <https://phpunit.de/>`_. This means that when you run tests on any Tripal site, the following will happen **FOR EACH TEST**:
 
 1. Drupal will setup a virtual Drupal site whose level of functionality depends on whether you are running a Kernel or Functional Test. This will actually setup a full drupal database schema within your current site temporarily. Note: This is not a new postgresql schema but rather creates all the tables used by Tripal in the same public schema but with prefixes in the table names.
 
-  - Kernel tests will give you a fully functional site that cannot be interacted with through the browser and that only has the specific modules, tables, etc that you specify in your test `setUp()`
+  - Kernel tests will give you a fully functional site that cannot be interacted with through the browser and that only has the specific modules, tables, etc. that you specify in your test `setUp()`
   - Functional tests will have a fully functional site with methods to explore the fully rendered pages within the test. It will still only have the modules you specify enabled but it will run the entire install for those modules whereas kernel tests do not.
 
-2. Tripal does not yet do any additional preparing of the Drupal test environment so as not to include any more then you need for your tests. This means there are no content types, no fields, no TripalTerms, etc. However, we do provide a number of methods to complement the Drupal methods in helping you setup the environment exactly as you want to. These will be described in the next section.
+2. Tripal does not yet do any additional preparing of the Drupal test environment so as not to include any more than you need for your tests. This means there are no content types, no fields, no TripalTerms, etc. However, we do provide a number of methods to complement the Drupal methods in helping you setup the environment exactly as you want to. These will be described in the next section.
 3. The code inside your tests `setUp()` is now run to setup the environment for this test. The same setup will be run for all tests in the same test class.
 4. Finally your test method is called. Note: any services, plugins, etc you use here will only have the test environment available. You will not have access to any data in your main site, nor should this long term affect your main site. **That said, we do not recommend running tests on production sites!**
 5. Once your test is complete, the `tearDown()` method is called to clean the entire development environment up. This includes dropping the development drupal tables including any changes made by your test.
@@ -56,7 +56,7 @@ For example, the following example creates the organism Tripal Term and then the
     ]);
   }
 
-The above will work just fine on it's own in a functional test as long as you have tripal listed in your `$modules` array. However, you will need to make additional parts available in kernel tests. Specifically, add the following install calls to the top of your setUp method:
+The above will work just fine on its own in a functional test as long as you have tripal listed in your `$modules` array. However, you will need to make additional parts available in kernel tests. Specifically, add the following install calls to the top of your setUp method:
 
 .. code-block:: php
 
@@ -90,7 +90,8 @@ The following code snippet shows how to add a single field to an existing conten
 .. code-block:: php
 
     // Create the term used by the field.
-    // This is the term that would normally get set in the form when adding a field through the UI.
+    // This is the term that would normally get set
+    // in the form when adding a field through the UI.
     $genus_term = $this->createTripalTerm([
       'vocab_name' => 'taxonomic_rank',
       'id_space_name' => 'TAXRANK',
@@ -115,7 +116,8 @@ The following code snippet shows how to add a single field to an existing conten
         'is_required' => TRUE,
         'cardinality' => 1,
         // This indicates the base chado table and column to use for this field.
-        // You would include anything here that you would normally supply on the storage settings form.
+        // You would include anything here that you would normally supply on
+        // the storage settings form.
         'storage_plugin_settings' => [
           'base_table' => 'organism',
           'base_column' => 'genus'
