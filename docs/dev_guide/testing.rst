@@ -23,6 +23,8 @@ The following automated testing documentation and tutorials are focused on testi
 .. toctree::
    :maxdepth: 2
 
+   testing/tripalTestTrait
+   testing/chadoTestTrait
    testing/fields
 
 Additional Resources
