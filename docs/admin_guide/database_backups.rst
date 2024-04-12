@@ -70,6 +70,12 @@ While not essential, for your convenience you may want to place chado in the def
   psql -h localhost -U drupaladmin -d sitedb \
     -c "ALTER DATABASE sitedb SET search_path = '$user', public, chado"
 
+Finally, it is recommended to rebuild the Drupal caches
+
+.. code-block:: bash
+
+  drush cache:rebuild
+
 Best Practices
 --------------
 
