@@ -27,7 +27,7 @@ You can use the PostgreSQL command ``pg_dump`` to make a backup of your database
     "sitedb" \
     > "$file"
 
-You could then run this script daily to make sure you always have a current database backup.
+You could then run this script daily to make sure you always have a current database backup. One way to do that is to use cron on your system. Although setting that up is beyond the scope of this documentation, you may find `this tutorial by GeeksForGeeks <https://www.geeksforgeeks.org/crontab-in-linux-with-examples/>`_ helpful.
 
 How to restore from a backup
 ----------------------------
