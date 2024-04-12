@@ -79,6 +79,6 @@ Finally, it is recommended to rebuild the Drupal caches
 Best Practices
 --------------
 
-If you are just learning Tripal, we recommend you start out with a :ref:`Tripal Docker` container. This makes initial installation as easy as possible, and if you make mistakes with your site, it is easy to start over with a new clean starting point. You can also backup and restore the database inside your docker container as described earlier.
+If you are just learning Tripal, we recommend you start out with a :ref:`Tripal Docker` container. This makes initial installation as easy as possible, and if you make mistakes with your site, it is easy to start over with a new clean starting point. You can also backup and restore the database inside your docker container as described earlier. Another approach when using docker is to use `docker commit <https://docs.docker.com/reference/cli/docker/container/commit/>`_ to create an image from a running container at the point you want to save. Then you can use the docker run command with this committed image in order to start a fresh site at the exact same point.
 
 If you have a publicly facing web site, which we usually call a "Production" site, it is highly recommended to also have a "Staging" or "Testing" site. Here you can load a database backup from your production site, and then test new loaders or procedures on the staging site without danger of harming your production site. Once your procedures are verified as working correctly, only then do you make changes to your production site.
