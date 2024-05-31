@@ -1,7 +1,7 @@
 Import a Genome Assembly + Annotation
 ======================================
 
-Now that we have our organism and whole genome analysis ready, we can begin loading genomic data. For this tutorial only a single gene from sweet orange will be loaded into the database. This is to ensure we can move through the tutorial rather quickly. The following data sets will be used for this tutorial:
+Now that we have our organism and whole genome analysis ready, we can begin loading genomic data. For this tutorial only a single gene from sweet orange will be loaded into the database. This is to ensure we can move through the tutorial rather quickly. The following datasets will be used for this tutorial:
 
 - `Citrus sinensis-orange1.1g015632m.g.gff3 <http://tripal.info/sites/default/files/Citrus_sinensis-orange1.1g015632m.g.gff3>`_
 - `Citrus sinensis-scaffold00001.fasta <http://tripal.info/sites/default/files/Citrus_sinensis-scaffold00001.fasta>`_
