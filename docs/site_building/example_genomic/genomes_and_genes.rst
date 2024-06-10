@@ -183,7 +183,7 @@ Now that we've loaded our feature data, we must publish them. This is different 
 
 Here we can specify the types of content to publish. For our site we want to offer both gene and mRNA pages (these types were present in our GFF file). First, to create pages for genes select 'Gene' from the dropdown.  A new Filter section is present and when opened appears as follows.
 
-The **Filters** section allows you to provide filters to limit what you want to publish.  For example, if you only want to publish genes for a single organism you can select that organism in the Organism drop down list.  We only have one organism in our site, but for the sake of experience, add a filter to publish only genes for Citrus sinensis by selecting it from the Organism drop down.  Scroll to the bottom a click the Publish button.  A new job is added to the job queue.  Manually run the job:
+The **Filters** section allows you to provide filters to limit what you want to publish.  For example, if you only want to publish genes for a single organism you can select that organism in the Organism drop down list.  We only have one organism in our site, but for the sake of experience, add a filter to publish only genes for *Citrus sinensis* by selecting it from the Organism drop down.  Scroll to the bottom a click the Publish button.  A new job is added to the job queue.  Manually run the job:
 
 ::
 
