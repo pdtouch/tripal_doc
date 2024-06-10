@@ -60,7 +60,7 @@ Custom module developers who wish to add new fields to Tripal whose data are
 stored in Chado should implement the following three classes for every new field:
 
 - **ChadoFieldItemBase**: extends the Tripal class `TripalFieldItemBase`
-  which extends the Drupal class `FiedlItemBase`. The `TripalFieldItemBase`
+  which extends the Drupal class `FieldItemBase`. The `TripalFieldItemBase`
   must be used for all fields attached to Tripal content types and the
   `ChadoFieldItemBase` adds Chado-specific support.
 - **TripalWidgetBase**: a class that extends the Drupal class `WidgetBase`.
@@ -618,7 +618,7 @@ The site admin will be able to change the storage settings if they:
 
 The fieldSettingsForm() Function
 ``````````````````````````````````
-The `fieldSettingsForm()` functions in the same was as the `storageSettingsForm()`
+The `fieldSettingsForm()` functions in the same way as the `storageSettingsForm()`
 function but for the field settings.
 
 
@@ -757,7 +757,7 @@ following actions can be used:
   - **chado_table**: (required) the name of the linked table (e.g. analysisprop)
   - **chado_column**: (required) the name of the foreign key column that
     links to the base table (e.g. analysis_id)
-  - **drupal_store**: (requited) this setting should always be TRUE for this action.
+  - **drupal_store**: (required) this setting should always be TRUE for this action.
     This forces Tripal to store this value in the Drupal field tables. Without
     this, Tripal cannot link the fields in Drupal with a base record.
 
@@ -772,7 +772,7 @@ following actions can be used:
   - **chado_table**: (required) the name of the linked table (e.g. analysisprop)
   - **chado_column**: (required) the name of the primary key column that
     links to the base table (e.g. analysisprop_id)
-  - **drupal_store**: (requited) this setting should always be TRUE for this action.
+  - **drupal_store**: (required) this setting should always be TRUE for this action.
     This forces Tripal to store this value in the Drupal field tables. Without
     this, Tripal cannot link the fields in Drupal with a base record.
 
