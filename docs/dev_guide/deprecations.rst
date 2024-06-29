@@ -19,6 +19,9 @@ possibly provide alternate functions to use in their place.
 
 For example, replacements for **db_\*** functions use Drupal's object oriented querying engine.
 
+The BioDB API
+-------------
+
 The new BioDB API in Tripal 4.x extends the Drupal Database API to handle multiple PostgreSQL schema and cross-schema querying thereby integrating Tripal and Chado. Specifically, this allows us to use the Drupal style of querying with Chado as shown in the following example:
 
 .. code-block:: php
@@ -56,6 +59,37 @@ Which would be the equivalent of the following Chado Query:
   WHERE x.is_obsolete = f
   LIMIT 10;
 
+Static query example on feature table in default Chado schema
+-------------------------------------------------------------
+
+.. code-block:: php
+
+  $biodb = \Drupal::service('tripal_chado.database');
+  $sql_query = 'SELECT name, residues FROM {1:feature} x WHERE x.is_obsolete = :obsolete LIMIT 0, 10;';
+  $results = $biodb->query($sql_query, [':obsolete' => 'f']);
+  foreach ($results as $record) {
+    echo $record->name . "\n";
+  }
+
+
+Cross schema queries
+--------------------
+
+.. code-block:: php
+
+  $biodb = \Drupal::service('tripal_chado.database');
+  $biodb->setSchemaName('chado1');
+  $biodb->addExtraSchema('chado2');
+  $sql = "
+    SELECT * FROM
+      {1:feature} f1,
+      {2:feature} f2,
+      {node_field_data} fd
+    WHERE fd.title = f1.uniquename
+      AND f1.uniquename = f2.uniquename;";
+  $results = $biodb->query($sql);
+
+
 .. note::
 
   If a developer finds that a function not mentioned here is depreated, 
@@ -71,6 +105,6 @@ Additional Resources
  - `Issue 1341 <https://github.com/tripal/tripal/issues/1341>`_
  - `Issue 1342 <https://github.com/tripal/tripal/issues/1342>`_
  - `Issue 1343 <https://github.com/tripal/tripal/issues/1343>`_
- - `Issue 1343 <https://github.com/tripal/tripal/issues/1646>`_
+ - `Issue 1646 <https://github.com/tripal/tripal/issues/1646>`_
  - `Drupal's how to deprecate <https://www.drupal.org/about/core/policies/core-change-policies/drupal-deprecation-policy#how>`_
 
