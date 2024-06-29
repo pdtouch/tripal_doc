@@ -46,10 +46,6 @@ tripal_chado/src/api/tripal_chado.query.api.inc
 | chook_chado_query_alter              |                     |
 +--------------------------------------+---------------------+
 
-tripal_chado/src/api/tripal_chado.variables.api.inc
- chado_generate_var
- chado_expand_var
-
 Tripal 4.x deprecations issue
 -----------------------------
 
