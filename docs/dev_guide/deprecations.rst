@@ -13,6 +13,7 @@ possibly suggest alternate functions to use in their place.
    :caption: Tripal DBX databse deprecations
 
    deprecations/chado_query_api
+   deprecations/chado_variables_api
 
 .. warning::
 
