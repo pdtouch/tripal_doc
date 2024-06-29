@@ -20,6 +20,10 @@ tripal_chado/src/api/tripal_chado.query.api.inc
 | chado_expand_var                 |                     |
 +----------------------------------+---------------------+
 
+For general information on deprecations in Tripal 4.x refer to 
+
+ - https://tripaldoc.readthedocs.io/en/latest/dev_guide/deprecations.html
+
 Tripal 4.x deprecations issue
 -----------------------------
 
