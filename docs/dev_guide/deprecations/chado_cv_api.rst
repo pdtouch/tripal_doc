@@ -1,5 +1,5 @@
 
-Deprecations in tripal_chado.variables.api.inc
+Deprecations in tripal_chado.cv.api.inc
 ==========================================
 
 Previous database storage and access functions are all replaced by Tripal DBX. 
@@ -15,9 +15,9 @@ tripal_chado/src/api/tripal_chado.query.api.inc
 +----------------------------------+---------------------+
 | Deprecated function              |    New method       |
 +==================================+=====================+
-| chado_generate_var               |                     |
+|                                  |                     |
 +----------------------------------+---------------------+
-| chado_expand_var                 |                     |
+|                                  |                     |
 +----------------------------------+---------------------+
 
 For general information on deprecations in Tripal 4.x refer to 
@@ -27,4 +27,5 @@ For general information on deprecations in Tripal 4.x refer to
 Tripal 4.x deprecations issue
 -----------------------------
 
- - https://github.com/tripal/tripal/issues/1343
+ - `Issue 1343 <https://github.com/tripal/tripal/issues/1343>`_ Deprecated Functions in Tripal 4
+ 

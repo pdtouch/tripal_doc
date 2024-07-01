@@ -53,4 +53,4 @@ For general information on deprecations in Tripal 4.x refer to
 Tripal 4.x deprecations issue
 -----------------------------
 
- - https://github.com/tripal/tripal/issues/1343
+ - `Issue 1343 <https://github.com/tripal/tripal/issues/1343>`_ Deprecated Functions in Tripal 4

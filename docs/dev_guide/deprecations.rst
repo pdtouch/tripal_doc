@@ -48,7 +48,7 @@ The new BioDB API in Tripal 4.x extends the Drupal Database API to handle multip
   }
 
 
-Which would be the equivalent of the following Chado Query:
+Which would be the equivalent of the following Chado SQL Query:
 
 .. code-block:: sql
 
@@ -92,7 +92,7 @@ Cross schema queries
 
 .. note::
 
-  If a developer finds that a function not mentioned here is depreated, 
+  If a developer finds that a function not mentioned here is deprecated, 
   please add an issue on our github at 
   https://github.com/tripal/tripal_doc/issues !
 
@@ -101,10 +101,10 @@ Additional Resources
 
  - `Official Drupal: db_* procedural functions of the Database API layer have been deprecated <https://www.drupal.org/node/2993033>`_
  - `Official Drupal: function db_select <https://api.drupal.org/api/drupal/core%21includes%21database.inc/function/db_select/8.9.x>`_
- - `Issue 1781 <https://github.com/tripal/tripal/issues/1781>`_ 
- - `Issue 1341 <https://github.com/tripal/tripal/issues/1341>`_
- - `Issue 1342 <https://github.com/tripal/tripal/issues/1342>`_
- - `Issue 1343 <https://github.com/tripal/tripal/issues/1343>`_
- - `Issue 1646 <https://github.com/tripal/tripal/issues/1646>`_
+ - `Issue 1781 <https://github.com/tripal/tripal/issues/1781>`_ Add deprecation notices to legacy code
+ - `Issue 1341 <https://github.com/tripal/tripal/issues/1341>`_ Deprecate existing Chado Query API in favour of new BioDB API
+ - `Issue 1342 <https://github.com/tripal/tripal/issues/1342>`_ Deprecate existing ChadoRecord + ChadoSchema classes in favour of Tripal BioDB
+ - `Issue 1343 <https://github.com/tripal/tripal/issues/1343>`_ Deprecated Functions in Tripal 4
+ - `Issue 1646 <https://github.com/tripal/tripal/issues/1646>`_ Move function-focused legacy API into a separate core submodule
  - `Drupal's how to deprecate <https://www.drupal.org/about/core/policies/core-change-policies/drupal-deprecation-policy#how>`_
 
