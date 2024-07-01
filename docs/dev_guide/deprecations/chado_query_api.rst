@@ -48,9 +48,4 @@ tripal_chado/src/api/tripal_chado.query.api.inc
 
 For general information on deprecations in Tripal 4.x refer to 
 
- - https://tripaldoc.readthedocs.io/en/latest/dev_guide/deprecations.html
-
-Tripal 4.x deprecations issue
------------------------------
-
- - `Issue 1343 <https://github.com/tripal/tripal/issues/1343>`_ Deprecated Functions in Tripal 4
+ - :ref:`Deprecations in Tripal 4.x`
