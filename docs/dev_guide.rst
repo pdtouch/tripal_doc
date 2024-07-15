@@ -12,3 +12,4 @@ Extending Tripal
    dev_guide/module_dev
    dev_guide/testing
    dev_guide/lessons
+   dev_guide/deprecations
