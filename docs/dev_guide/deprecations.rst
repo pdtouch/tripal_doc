@@ -2,20 +2,20 @@
 Deprecations in Tripal 4.x
 ==========================
 
-Several Tripal 4.x's functions have been modified, deprecating their older versions. 
-While it is ok to use that code at the moment, legacy code may/will disappear in future releases. Before Tripal 4.x developers reuse code of the deprecated legacy functions, they need to be aware of the deprecated status of the function. 
-This section describes how to handle deprecations in Tripal 4.x.
-It gives a list of functions that are deprecated in Tripal 4.x and 
-possibly provide alternate functions to use in their place.
-
 .. toctree::
-   :maxdepth: 1
-   :caption: Tripal DBX database deprecations
+   :maxdepth: 2
+   :caption: Contents:
 
    deprecations/chado_query_api
    deprecations/chado_variables_api
    deprecations/chado_cv_api
    deprecations/chado_db_api
+
+Several of Tripal 4.x's functions have been modified, deprecating their older versions.
+While it is ok to use that code at the moment, legacy code may/will disappear in future releases. Before Tripal 4.x developers reuse code of the deprecated legacy functions, they need to be aware of the deprecated status of the function.
+This section describes how to handle deprecations in Tripal 4.x.
+It gives a list of functions that are deprecated in Tripal 4.x and
+possibly provide alternate functions to use in their place.
 
 For example, replacements for **db_\*** functions use Drupal's object oriented querying engine.
 

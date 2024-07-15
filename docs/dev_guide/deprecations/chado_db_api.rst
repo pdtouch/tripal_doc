@@ -2,6 +2,9 @@
 Deprecations in tripal_chado.db.api.inc
 ==========================================
 
+.. warning::
+  This documentation is still under development and is not complete.
+
 Previous database storage and access functions are all replaced by Tripal DBX. 
 For example, to replace **db_select** one should move to 
 

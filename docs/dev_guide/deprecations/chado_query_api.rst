@@ -2,6 +2,9 @@
 Deprecations in tripal_chado.query.api.inc
 ==========================================
 
+.. warning::
+  This documentation is still under development and is not complete.
+
 Previous database storage and access functions are all replaced by Tripal DBX. 
 For example, to replace **db_select** one should move to 
 
@@ -29,7 +32,7 @@ tripal_chado/src/api/tripal_chado.query.api.inc
     +--------------------------------------+---------------------+
     | chado_query                          |                     |
     +--------------------------------------+---------------------+
-    | chado_shcema_get_forieng_key         |                     |
+    | chado_schema_get_foreign_key         |                     |
     +--------------------------------------+---------------------+
     | chado_select_record                  |                     |
     +--------------------------------------+---------------------+
